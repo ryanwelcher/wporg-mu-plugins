@@ -1,0 +1,20 @@
+{
+    "apiVersion": 2,
+    "name": "wporg/props",
+    "title": "Props",
+    "category": "common",
+    "description": "Description",
+    "text-domain": "example-text-domain",
+    "icon": "feedback",
+    "attributes": {},
+    "keywords": [],
+    "version": "0.0.1",
+    "providesContext": {},
+    "usesContext": [],
+    "styles": [],
+    "example": {
+        "attributes": {}
+    },
+    "supports": {},
+    "editorScript": "file:./index.js"
+}
