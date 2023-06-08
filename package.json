@@ -43,7 +43,9 @@
 		"setup:tools": "yarn install && composer install && TEXTDOMAIN=wporg composer exec update-configs",
 		"update:tools": "composer update && TEXTDOMAIN=wporg composer exec update-configs",
 		"wp-env": "wp-env",
-		"test:php": "wp-env run phpunit 'phpunit -c /var/www/html/phpunit.xml.dist --verbose'"
+		"test:php": "wp-env run phpunit 'phpunit -c /var/www/html/phpunit.xml.dist --verbose'",
+    "blocks:dev": "wp-scripts start --webpack-src-dir=mu-plugins/blocks",
+    "blocks:build": "wp-scripts build --webpack-src-dir=mu-plugins/blocks"
 	},
 	"rtlcssConfig": {},
 	"stylelint": {
