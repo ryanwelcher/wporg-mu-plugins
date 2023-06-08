@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"@wordpress/browserslist-config": "4.1.2",
 		"@wordpress/env": "5.5.0",
-		"@wordpress/scripts": "23.5.0",
+		"@wordpress/scripts": "26.6.0",
 		"chalk": "4.1.2",
 		"cross-spawn": "7.0.3",
 		"cssnano": "5.1.11",
@@ -23,7 +23,7 @@
 		"postcss": "8.4.14",
 		"postcss-cli": "9.1.0",
 		"postcss-import": "14.1.0",
-		"postcss-preset-env": "7.7.1",
+		"postcss-preset-env": "^7.7.1",
 		"resolve-bin": "1.0.1",
 		"rtlcss": "3.5.0",
 		"url-loader": "^3.0.0",
@@ -44,8 +44,8 @@
 		"update:tools": "composer update && TEXTDOMAIN=wporg composer exec update-configs",
 		"wp-env": "wp-env",
 		"test:php": "wp-env run phpunit 'phpunit -c /var/www/html/phpunit.xml.dist --verbose'",
-    "blocks:dev": "wp-scripts start --webpack-src-dir=mu-plugins/blocks",
-    "blocks:build": "wp-scripts build --webpack-src-dir=mu-plugins/blocks"
+		"blocks:dev": "wp-scripts start --webpack-src-dir=mu-plugins/blocks/src --output-path=mu-plugins/blocks/build",
+		"blocks:build": "wp-scripts build --webpack-src-dir=mu-plugins/blocks/src --output-path=mu-plugins/blocks/build"
 	},
 	"rtlcssConfig": {},
 	"stylelint": {
@@ -66,5 +66,7 @@
 			"selector-class-pattern": null
 		}
 	},
-	"dependencies": {}
+	"dependencies": {
+		"postcss-loader": "^7.3.2"
+	}
 }
