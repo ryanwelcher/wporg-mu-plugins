@@ -9,7 +9,7 @@ use WordPressdotorg\Autoload;
  */
 
 // Path to the build directory for the blocks.
-define( 'BLOCK_BUILD_DIR', dirname( __FILE__ ) . 'blocks/build' );
+define( 'BLOCK_BUILD_DIR', dirname( __FILE__ ) . '/blocks/build' );
 
 // Load and register the Autoloader.
 if ( ! class_exists( '\WordPressdotorg\Autoload\Autoloader', false ) ) {
@@ -19,17 +19,18 @@ if ( ! class_exists( '\WordPressdotorg\Autoload\Autoloader', false ) ) {
 Autoload\register_class_path( __NAMESPACE__, __DIR__ );
 
 require_once __DIR__ . '/helpers/helpers.php';
-require_once __DIR__ . '/blocks/global-header-footer/blocks.php';
-require_once __DIR__ . '/blocks/horizontal-slider/horizontal-slider.php';
-require_once __DIR__ . '/blocks/language-suggest/language-suggest.php';
-require_once __DIR__ . '/blocks/latest-news/latest-news.php';
-require_once __DIR__ . '/blocks/link-wrapper/index.php';
-require_once __DIR__ . '/blocks/notice/index.php';
-require_once __DIR__ . '/blocks/sidebar-container/index.php';
-require_once __DIR__ . '/blocks/screenshot-preview/block.php';
-require_once __DIR__ . '/blocks/site-breadcrumbs/index.php';
-require_once __DIR__ . '/blocks/table-of-contents/index.php';
-require_once __DIR__ . '/blocks/props/index.php';
+require_once __DIR__ . '/blocks/blocks.php';
+// require_once __DIR__ . '/blocks/global-header-footer/blocks.php';
+// require_once __DIR__ . '/blocks/horizontal-slider/horizontal-slider.php';
+// require_once __DIR__ . '/blocks/language-suggest/language-suggest.php';
+// require_once __DIR__ . '/blocks/latest-news/latest-news.php';
+// require_once __DIR__ . '/blocks/link-wrapper/index.php';
+// require_once __DIR__ . '/blocks/notice/index.php';
+// require_once __DIR__ . '/blocks/sidebar-container/index.php';
+// require_once __DIR__ . '/blocks/screenshot-preview/block.php';
+// require_once __DIR__ . '/blocks/site-breadcrumbs/index.php';
+// require_once __DIR__ . '/blocks/table-of-contents/index.php';
+// require_once __DIR__ . '/blocks/props/index.php';
 require_once __DIR__ . '/global-fonts/index.php';
 require_once __DIR__ . '/plugin-tweaks/index.php';
 require_once __DIR__ . '/rest-api/index.php';
