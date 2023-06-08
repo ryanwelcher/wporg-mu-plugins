@@ -8,6 +8,9 @@ use WordPressdotorg\Autoload;
  * `utilities/` aren't loaded automatically since they're not used globally.
  */
 
+// Path to the build directory for the blocks.
+define( 'BLOCK_BUILD_DIR', dirname( __FILE__ ) . 'blocks/build' );
+
 // Load and register the Autoloader.
 if ( ! class_exists( '\WordPressdotorg\Autoload\Autoloader', false ) ) {
 	require_once __DIR__ . '/autoloader/class-autoloader.php';
