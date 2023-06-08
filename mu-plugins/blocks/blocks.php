@@ -4,18 +4,22 @@
  */
 namespace WordPressdotorg\MU_Plugins\Blocks;
 
-add_action( 'init', __NAMESPACE__ . '\init' );
 
 /**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
+ * Include some helper.php files for blocks that may need them.
+ */
+require_once __DIR__ . '/src/table-of-contents/helpers.php';
+
+
+/**
+ * Register all the blocks on the same hook.
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-
 function init() {
 	register_block_type( BLOCK_BUILD_DIR . '/notice' );
 	register_block_type( BLOCK_BUILD_DIR . '/language-suggest' );
 	register_block_type( BLOCK_BUILD_DIR . '/table-of-contents' );
 }
+
+add_action( 'init', __NAMESPACE__ . '\init' );
