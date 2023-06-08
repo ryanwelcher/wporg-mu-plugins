@@ -17,4 +17,5 @@ add_action( 'init', __NAMESPACE__ . '\init' );
 function init() {
 	register_block_type( BLOCK_BUILD_DIR . '/notice' );
 	register_block_type( BLOCK_BUILD_DIR . '/language-suggest' );
+	register_block_type( BLOCK_BUILD_DIR . '/table-of-contents' );
 }
