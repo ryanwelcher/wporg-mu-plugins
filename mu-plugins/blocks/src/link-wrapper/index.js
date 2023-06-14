@@ -11,6 +11,7 @@ import { Notice, PanelBody, TextControl } from '@wordpress/components';
  * Internal dependencies
  */
 import metadata from './block.json';
+import './postcss/style.pcss'
 
 function Edit( { attributes, setAttributes } ) {
 	const wrapperRef = useRef();
